@@ -26,9 +26,6 @@ body{
     display:flex;
     min-height:100vh;
 }
-
-/* Sidebar */
-
 .sidebar{
     width:240px;
     background:#0d330e;
@@ -87,7 +84,7 @@ body{
     text-align:center;
 }
 
-/* Main Content */
+/* Main */
 
 .main-content{
     margin-left:260px;
@@ -95,9 +92,6 @@ body{
     padding:25px;
     box-sizing: border-box;
 }
-/* ======================
-   Payment Header
-====================== */
 
 .payment-header{
     display:flex;
@@ -129,10 +123,6 @@ body{
 .add-payment-btn:hover{
     transform:translateY(-2px);
 }
-
-/* ======================
-   Statistics Cards
-====================== */
 
 .payment-cards{
     display:grid;
@@ -166,9 +156,6 @@ body{
     color:#777;
 }
 
-/* ======================
-   Toolbar
-====================== */
 
 .payment-toolbar{
     display:flex;
@@ -213,10 +200,6 @@ body{
     cursor:pointer;
 }
 
-/* ======================
-   Revenue Layout
-====================== */
-
 .payment-layout{
     display:grid;
     
@@ -259,10 +242,6 @@ body{
 .method strong{
     color:#0d330e;
 }
-
-/* ======================
-   Transactions
-====================== */
 
 .section-title{
     color:#0d330e;
@@ -382,10 +361,6 @@ body{
     color:#ffefb3;
 }
 
-/* ======================
-   Pagination
-====================== */
-
 .pagination{
     margin-top:25px;
     display:flex;
@@ -416,9 +391,6 @@ body{
     color:#ffefb3;
 }
 
-/* ======================
-   Responsive
-====================== */
 
 @media(max-width:1100px){
 
@@ -460,9 +432,6 @@ body{
 <body>
 
 <div class="dashboard">
-
-    <!-- Sidebar -->
-
     <aside class="sidebar">
 
         <div class="logo">
@@ -525,15 +494,9 @@ body{
 
 
     </aside>
-    
-
-    <!-- Main Content -->
     <main class="main-content">
 
         <section class="payment-section">
-        
-            <!-- Header -->
-        
             <div class="payment-header">
         
                 <div>
@@ -547,9 +510,6 @@ body{
                 </button>
         
             </div>
-        
-            <!-- Statistics Cards -->
-        
             <div class="payment-cards">
         
                 <div class="payment-card">
@@ -578,8 +538,6 @@ body{
         
             </div>
         
-            <!-- Search & Filter -->
-        
             <div class="payment-toolbar">
         
                 <div class="search-box">
@@ -606,12 +564,7 @@ body{
         
             </div>
         
-            <!-- Revenue & Methods -->
-        
             <div class="payment-layout">
-        
-               
-        
                 <div class="payment-methods">
         
                     <h3>Payment Methods</h3>
@@ -634,9 +587,6 @@ body{
                 </div>
         
             </div>
-        
-            <!-- Transactions -->
-        
             <h3 class="section-title">Recent Transactions</h3>
         
             <div class="payments-list">
@@ -774,9 +724,6 @@ body{
                 </div>
         
             </div>
-        
-            <!-- Pagination -->
-        
             <div class="pagination">
         
                 <span>Showing 1-4 of 348 Transactions</span>
