@@ -203,85 +203,58 @@ body{
 }
 
 /* ANALYTICS GRID */
-.analytics-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:20px;
-    margin-bottom:25px;
-}
-
-/* CHART CARD */
-.chart-card{
-    background:#fff;
-    padding:20px;
-    border-radius:15px;
-    box-shadow:0 3px 12px rgba(0,0,0,.08);
-    border-top:5px solid #0d330e;
-    transition:.3s;
-}
-
-.chart-card:hover{
-    transform:translateY(-3px);
-}
-
-.chart-card h3{
-    color:#0d330e;
-    margin-bottom:10px;
-}
-
-/* MINI CHART */
 .mini-chart{
     display:flex;
-    justify-content:space-between;
+    justify-content:space-around;
     align-items:flex-end;
-    height:220px;
-    padding:10px 5px;
+    height:250px;
+    padding:15px 10px;
 }
 
 .bar{
-    flex:1;
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:flex-end;
+    height:100%;
     gap:8px;
 }
 
 .bar span{
-    width:28px;
-    background:#0d330e;
-    border-radius:8px;
+    width:35px;
+    background:linear-gradient(to top,#0d330e,#2f7d32);
+    border-radius:10px 10px 0 0;
 
-    /* مهم: anchor از پایین */
-    transform-origin: bottom;
-
-    /* شروع از صفر ارتفاع */
-    transform: scaleY(0);
-
-    /* انیمیشن */
-    animation: growColumn 1s ease-out forwards;
+    transform-origin:bottom;
+    animation:growBar 1s ease forwards;
 }
 
-/* delay برای هر ستون (حس واقعی dashboard) */
-.bar:nth-child(1) span{ animation-delay:0.1s; }
-.bar:nth-child(2) span{ animation-delay:0.2s; }
-.bar:nth-child(3) span{ animation-delay:0.3s; }
-.bar:nth-child(4) span{ animation-delay:0.4s; }
-.bar:nth-child(5) span{ animation-delay:0.5s; }
-.bar:nth-child(6) span{ animation-delay:0.6s; }
-
-@keyframes growColumn{
-    from{
-        transform: scaleY(0);
-    }
-    to{
-        transform: scaleY(1);
-    }
+.bar small{
+    color:#0d330e;
+    font-weight:bold;
 }
 
 .bar p{
-    font-size:12px;
     color:#666;
+    font-size:13px;
+}
+
+.bar:nth-child(1) span{animation-delay:.1s;}
+.bar:nth-child(2) span{animation-delay:.2s;}
+.bar:nth-child(3) span{animation-delay:.3s;}
+.bar:nth-child(4) span{animation-delay:.4s;}
+.bar:nth-child(5) span{animation-delay:.5s;}
+.bar:nth-child(6) span{animation-delay:.6s;}
+
+@keyframes growBar{
+    from{
+        transform:scaleY(0);
+        opacity:0;
+    }
+    to{
+        transform:scaleY(1);
+        opacity:1;
+    }
 }
 
 /* PLACEHOLDER */
@@ -477,56 +450,48 @@ body{
             </div>
         
             <!-- ANALYTICS -->
-            <div class="analytics-grid">
-        
-                <!-- MONTHLY REVENUE CHART -->
-                <div class="chart-card">
-                    <h3>Monthly Revenue</h3>
-        
-                    <div class="mini-chart">
-        
-                        <div class="bar">
-                            <span style="--h:70%"></span>
-                            <p>Jan</p>
-                        </div>
-        
-                        <div class="bar">
-                            <span style="height:45%"></span>
-                            <p>Feb</p>
-                        </div>
-        
-                        <div class="bar">
-                            <span style="height:75%"></span>
-                            <p>Mar</p>
-                        </div>
-        
-                        <div class="bar">
-                            <span style="height:55%"></span>
-                            <p>Apr</p>
-                        </div>
-        
-                        <div class="bar">
-                            <span style="height:90%"></span>
-                            <p>May</p>
-                        </div>
-        
-                        <div class="bar">
-                            <span style="height:70%"></span>
-                            <p>Jun</p>
-                        </div>
-        
+            <div class="chart-card">
+                <h3>Monthly Revenue</h3>
+            
+                <div class="mini-chart">
+            
+                    <div class="bar">
+                        <small>$8k</small>
+                        <span style="height:50%"></span>
+                        <p>Jan</p>
                     </div>
-                </div>
-        
-                <!-- PATIENT GROWTH (NO REAL CHART) -->
-                <div class="chart-card">
-                    <h3>Patient Growth</h3>
-        
-                    <div class="chart-placeholder">
-                        Patient Growth Overview
+            
+                    <div class="bar">
+                        <small>$10k</small>
+                        <span style="height:65%"></span>
+                        <p>Feb</p>
                     </div>
+            
+                    <div class="bar">
+                        <small>$12k</small>
+                        <span style="height:80%"></span>
+                        <p>Mar</p>
+                    </div>
+            
+                    <div class="bar">
+                        <small>$9k</small>
+                        <span style="height:60%"></span>
+                        <p>Apr</p>
+                    </div>
+            
+                    <div class="bar">
+                        <small>$14k</small>
+                        <span style="height:90%"></span>
+                        <p>May</p>
+                    </div>
+            
+                    <div class="bar">
+                        <small>$11k</small>
+                        <span style="height:75%"></span>
+                        <p>Jun</p>
+                    </div>
+            
                 </div>
-        
             </div>
         
             <!-- TOP DEPARTMENTS -->
