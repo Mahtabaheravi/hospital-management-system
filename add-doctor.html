@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#e8f6e9;
+}
+
+.dashboard{
+    display:flex;
+    min-height:100vh;
+}
+
+/* menu */
+
+.sidebar{
+    width:240px;
+    background:#0d330e;
+    color:#ffefb3;
+    padding:25px 15px;
+    position:fixed;
+    top:0;
+    left:0;
+    height:100vh;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:50px;
+}
+
+.logo img{
+    width:50px;
+    height:50px;
+    object-fit:contain;
+}
+
+.logo span{
+    font-size:24px;
+    font-weight:bold;
+}
+
+.menu{
+    list-style:none;
+}
+
+.menu li{
+    margin-bottom:12px;
+}
+
+.menu li a{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+    color:#ffefb3;
+    padding:12px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.menu li a:hover{
+    background:#ffefb3;
+    color:#0d330e;
+}
+
+.menu li a i{
+    width:20px;
+    text-align:center;
+}
+
+/* main */
+
+.main-content{
+    margin-left:260px;
+    width:calc(100% - 260px);
+    padding:20px;
+    box-sizing: border-box;
+}
+.page-header{
+    margin-bottom: 25px;
+}
+.page-header h2{
+    color: #0d330e;
+}
+.page-header p{
+    color: #666;
+    margin-top: 5px;
+}
+
+.form{
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, .08);
+    border-left: 5px solid #0d330e;
+    border-right: 5px solid #0d330e;
+}
+.form h3{
+    color: #0d330e;
+    margin-bottom: 20px;
+}
+.doctor-form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+
+}
+.form-group label{
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+}
+.form-group input,
+.form-group select,
+.form-group textarea{
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    border-color: #0d330e;
+}
+.full-width{
+    grid-column: 1/3;
+
+}
+.form-button{
+    grid-column: 1/3;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+
+}
+.cancel-btn{
+    background: #ffefb3;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+.save-btn{
+    background: #0d330e;
+    color: #ffefb3;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.save-btn:hover{
+    background: #145017;
+}
+</style>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="pic/abstract-wings-cross-healthcare-icon_1034893-5577.jpg" alt="">
+                <span>HealthCare</span>
+            </div>
+            <ul class="menu">
+                <li>
+                    <a href="index.html">
+                        <i class="fa-solid fa-house"></i>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="doctors.html">
+                        <i class="fa-solid fa-user-doctor"></i>
+                        Doctors
+                    </a>
+                </li>
+                <li>
+                    <a href="patients.html">
+                        <i class="fa-solid fa-bed"></i>
+                        Patients
+                    </a>
+                </li>
+                <li>
+                    <a href="appointment.html">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        Appointments
+                    </a>
+                </li>
+                <li>
+                    <a href="patients.html">
+                        <i class="fa-solid fa-credit-card"></i>
+                        Payments
+                    </a>
+                </li>
+                <li>
+                    <a href="report.html">
+                        <i class="fa-solid fa-chart-line"></i>
+                        Reports
+                    </a>
+                </li>
+                <li>
+                    <a href="setting.html">
+                        <i class="fa-solid fa-gear"></i>
+                        Settings
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <div class="page-header">
+              <div>
+                <h2>Add New Doctor</h2>
+                <p>Home > Doctors > Add Doctor</p>
+              </div>
+            </div>
+            <div class="form">
+             <h3>Doctor Information</h3>
+             <form class="doctor-form">
+              <div class="form-group">
+                <label >Doctor Name</label>
+                <input type="text" placeholder="Enter Doctor name">
+              </div>
+              <div class="form-group">
+               <label>Speciality</label>
+               <select >
+                <option>Select Speciality</option>
+                <option>Cardiologist</option>
+                <option>Neurologist</option>
+                <option>Dermatologist</option>
+                <option>Pediatrician</option>
+               </select>
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" placeholder="doctor@gamail.com">
+              </div>
+              <div class="form-group">
+                <label>Phone number</label>
+                <input type="text" placeholder="+93xxxxxxxxx">
+              </div>
+              <div class="form-group">
+                <label>Room number</label>
+                <input type="text" placeholder="Room 204">
+              </div>
+              <div class="form-group">
+                <label>Working Hour</label>
+                <input type="text" placeholder="08:00 AM - 04:00 PM">
+              </div>
+              <div class="form-group">
+                <label>Doctor Photo</label>
+                <input type="file">
+              </div>
+              <div class="form-group full-width">
+                <label>About Doctor</label>
+                <textarea rows="5" placeholder="Doctor description.........."></textarea>
+              </div>
+              <div class="form-button">
+               <button type="reset" class="cancel-btn">Cancel</button>
+               <button type="submit" class="save-btn">Save Doctor</button>
+              </div>
+
+             </form>
+            </div>
+            </main>
+        </body>
+</html>
