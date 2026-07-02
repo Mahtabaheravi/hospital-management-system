@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+    <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#e8f6e9;
+}
+
+.dashboard{
+    display:flex;
+    min-height:100vh;
+}
+
+/* Sidebar */
+
+.sidebar{
+    width:240px;
+    background:#0d330e;
+    color:#ffefb3;
+    padding:25px 15px;
+    position:fixed;
+    top:0;
+    left:0;
+    height:100vh;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:50px;
+}
+
+.logo img{
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    object-fit:contain;
+}
+
+.logo span{
+    font-size:24px;
+    font-weight:bold;
+}
+
+.menu{
+    list-style:none;
+}
+
+.menu li{
+    margin-bottom:12px;
+}
+
+.menu li a{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+    color:#ffefb3;
+    padding:12px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.menu li a:hover{
+    background:#ffefb3;
+    color:#0d330e;
+}
+
+.menu li a:hover,
+.menu li a.active{
+    background: #ffefb3;
+    color: #0d330e;
+    font-weight: 600;
+}
+.menu li a i{
+    width:20px;
+    text-align:center;
+}
+
+/* Main */
+
+.main-content{
+    margin-left:260px;
+    width:calc(100% - 260px);
+    padding:25px;
+    box-sizing: border-box;
+}
+.main{
+    flex:1;
+    padding:30px;
+}
+.main h3 {
+    color: #0d330e;
+}
+.invoice{
+    background:#fff;
+    padding:35px;
+    border-radius:18px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    
+    gap: 15px;
+    margin-bottom: 25px;
+}
+.info img{
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 12px;
+    padding: 6px;
+}
+.info h3{
+    margin: 0;
+    font-size: 20px;
+}
+.info p{
+    margin: 2px 0;
+    font-size: 15px;
+    color: #555;
+}
+.actions button{
+    background:#0d330e;
+    color:#fff;
+    border:none;
+    padding:10px 14px;
+    border-radius:8px;
+    margin-left:8px;
+    cursor:pointer;
+}
+
+.status{
+    display:inline-block;
+    margin-top:10px;
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.paid{background:#e8f8ea;color:#198754;}
+.unpaid{background:#ffe8e8;color:#dc3545;}
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    margin:25px 0;
+}
+.grid h3{
+    margin: 0;
+    font-size: 20px;
+}
+.grid p{
+    margin: 2px 0;
+    font-size: 15px;
+    color: #555;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+th,td{
+    padding:12px;
+    border-bottom:1px solid #eee;
+    text-align: center;
+}
+
+th{
+    background:#f8f9fa;
+    
+}
+
+.summary{
+    width:320px;
+    margin-left:auto;
+    text-align:right;
+    margin-top:40px;
+    
+}
+.summary h3{
+    margin: 0;
+    font-size: 20px;
+
+}
+.summary p{
+    margin: 2px 0;
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 10px;
+}
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="pic/abstract-wings-cross-healthcare-icon_1034893-5577.jpg" alt="">
+                <span>HealthCare</span>
+            </div>
+    
+            <ul class="menu" >
+                <li >
+                    <a  href="index.html">
+                        <i class="fa-solid fa-house"></i>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="doctors.html">
+                        <i class="fa-solid fa-user-doctor"></i>
+                        Doctors
+                    </a>
+                </li>
+                <li>
+                    <a href="patients.html">
+                        <i class="fa-solid fa-bed"></i>
+                        Patients
+                    </a>
+                </li>
+                <li>
+                    <a href="appointment.html">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        Appointments
+                    </a>
+                </li>
+                <li>
+                    <a class="active" href="payment.html">
+                        <i class="fa-solid fa-credit-card"></i>
+                        Payments
+                    </a>
+                </li>
+                <li>
+                    <a href="report.html">
+                        <i class="fa-solid fa-chart-line"></i>
+                        Reports
+                    </a>
+                </li>
+                <li>
+                    <a href="setting.html">
+                        <i class="fa-solid fa-gear"></i>
+                        Settings
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <main class="main-content">
+        <div class="main">
+            <div class="invoice">
+
+                <div class="header">
+                    <h2>Invoice Details</h2>
+    
+                    <div class="actions">
+                        <button>Print</button>
+                        <button>Download PDF</button>
+                    </div>
+                </div>
+                <div class="info">
+                <img src="pic/abstract-wings-cross-healthcare-icon_1034893-5577.jpg" alt="">
+                <h3>HealthCare Hospital</h3>
+                <p>Kabul, Afghanistan</p>
+                <p>+93 XXX XXX XXX | hospital@gmail.com</p>
+                
+
+                <h2>Invoice #INV-0001</h2>
+                <p>Issue Date: 01 Aug 2026</p>
+                <p>Due Date: 07 Aug 2026</p>
+                </div>
+    
+                <span class="status paid">Paid</span>
+                <div class="grid">
+    
+                    <div>
+                        <h3>Invoice To</h3>
+                        <p>Ahmad Khan</p>
+                        <p>Male</p>
+                        <p>+93 XXX XXX XXX</p>
+                        <p>Kabul, Afghanistan</p>
+                    </div>
+    
+                    <div>
+                        <h3>Payment Details</h3>
+                        <p>Method: Cash</p>
+                        <p>Status: Paid</p>
+                        <p>Transaction ID: TXN-12345</p>
+                    </div>
+    
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Service</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>Qty</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+    
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Blood Test</td>
+                            <td>General Blood Test</td>
+                            <td>$25</td>
+                            <td>2</td>
+                            <td>$50</td>
+                        </tr>
+    
+                        <tr>
+                            <td>2</td>
+                            <td>X-Ray</td>
+                            <td>Chest X-Ray</td>
+                            <td>$50</td>
+                            <td>1</td>
+                            <td>$50</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="summary">
+                    <p>Subtotal: $100</p>
+                    <p>Tax: $10</p>
+                    <h3>Total: $110</h3>
+                </div>
+    
+            </div>
+    
+        </div>
+    
+    </div>
+        </main>
+    
+</body>
+</html>

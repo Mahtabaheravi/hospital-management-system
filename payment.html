@@ -120,13 +120,23 @@ body{
     background:#0d330e;
     color:#ffefb3;
     border:none;
-    padding:12px 22px;
-    border-radius:12px;
+    padding:12px 20px;
+    border-radius:10px;
     cursor:pointer;
     font-weight:bold;
-    transition:.3s;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+
+    transition:0.3s;
 }
 
+.add-payment-btn i{
+    font-size:16px;
+    color:#ffefb3;
+}
 .add-payment-btn:hover{
     transform:translateY(-2px);
 }
@@ -156,7 +166,7 @@ body{
     margin-bottom:10px;
 }
 
-.payment-card h3{
+.payment-card h4{
     color:#0d330e;
     font-size:28px;
     margin-bottom:5px;
@@ -225,7 +235,7 @@ body{
     margin-top: 50px;
     padding-bottom: 12px;
     border-bottom: 2px solid #e8f6e9;
-    text-align: center;
+    text-align: left;
 }
 .invoice-section i ,
 .payment-section i ,
@@ -252,6 +262,10 @@ body{
     padding: 20px;
     border: none;
     
+}
+.invoice-section .table1 td a{
+    text-decoration: none;
+    color: #0d330e;
 }
 .invoice-section .table1 tbody tr{
     box-shadow: 0 5px 18px rgba(0, 0, 0, 0.3);
@@ -441,7 +455,7 @@ body{
                 </div>
         
                 <button class="add-payment-btn">
-                    <i class="fa-solid fa-plus"></i>
+                    <i class="fa-solid fa-house"></i>
                     Add Payment
                 </button>
         
@@ -450,25 +464,25 @@ body{
         
                 <div class="payment-card">
                     <i class="fa-solid fa-money-bill-wave"></i>
-                    <h3>$45,200</h3>
+                    <h4>$45,200</h4>
                     <p>Total Revenue</p>
                 </div>
         
                 <div class="payment-card">
                     <i class="fa-solid fa-sack-dollar"></i>
-                    <h3>$2,850</h3>
+                    <h4>$2,850</h4>
                     <p>Today's Revenue</p>
                 </div>
         
                 <div class="payment-card">
                     <i class="fa-solid fa-circle-check"></i>
-                    <h3>320</h3>
+                    <h4>320</h4>
                     <p>Paid Bills</p>
                 </div>
         
                 <div class="payment-card">
                     <i class="fa-solid fa-clock"></i>
-                    <h3>28</h3>
+                    <h4>28</h4>
                     <p>Pending Bills</p>
                 </div>
         
@@ -517,7 +531,7 @@ body{
               <tbody>
                 <tr>
                     <td>1</td>
-                    <td>#INV-0001</td>
+                    <td><a href="invoice.html">#INV-0001</a></td>
                     <td>Ahmad Khan</td>
                     <td>1 Aug 2026</td>
                     <td>7 Aug 2026</td>
@@ -528,7 +542,7 @@ body{
                 </tr>
                 <tr>
                     <td>1</td>
-                    <td>#INV-0001</td>
+                    <td><a href="invoice.html">#INV-0001</a></td>
                     <td>Ahmad Khan</td>
                     <td>1 Aug 2026</td>
                     <td>7 Aug 2026</td>
@@ -539,7 +553,7 @@ body{
                 </tr>
                 <tr>
                     <td>1</td>
-                    <td>#INV-0001</td>
+                    <td><a href="invoice.html">#INV-0001</a></td>
                     <td>Ahmad Khan</td>
                     <td>1 Aug 2026</td>
                     <td>7 Aug 2026</td>
@@ -550,7 +564,7 @@ body{
                 </tr>
                 <tr>
                     <td>1</td>
-                    <td>#INV-0001</td>
+                    <td><a href="invoice.html">#INV-0001</a></td>
                     <td>Ahmad Khan</td>
                     <td>1 Aug 2026</td>
                     <td>7 Aug 2026</td>
@@ -561,7 +575,7 @@ body{
                 </tr>
                 <tr>
                     <td>1</td>
-                    <td>#INV-0001</td>
+                    <td><a href="invoice.html">#INV-0001</a></td>
                     <td>Ahmad Khan</td>
                     <td>1 Aug 2026</td>
                     <td>7 Aug 2026</td>
