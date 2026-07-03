@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthCare SignIn</title>
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+ *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f3f4f6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+
+}   
+.container{
+  width: 1100px;
+  min-height: 650px;
+  background: #fff;
+  border-radius: 35px;
+  overflow: hidden;
+  display: flex;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+.left-side{
+    width: 45%;
+    background: linear-gradient(135deg ,#0d330e ,#1b5e20);
+    color: white;
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.hospital-name{
+    width: 100%;
+    font-size: 32px;
+    font-weight: 700;
+
+}
+.welcome{
+    text-align: left;
+    width: 100%;
+}
+.welcome h1{
+    font-size: 50px;
+    line-height: 70px;
+    font-weight: 700;
+}
+.logo{
+    width: 280px;
+    object-fit: contain;
+}
+.right-side{
+    width: 55%;
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.right-side h1{
+    margin-bottom: 45px;
+    color: #111827;
+    font-size: 42px;
+}
+.input-box{
+    margin-bottom: 28px;
+
+}
+.input-box input{
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #e5e7eb;
+    padding: 14px 0;
+    font-size: 17px;
+    outline: none;
+    transition: 0.3s;
+}
+.input-box input:focus{
+    border-color: #1b5e20;
+}
+button{
+    width: 100%;
+    border: none;
+    background: #1b5e20;
+    color: white;
+    padding: 18px;
+    border-radius: 40px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover{
+    background: #0d330e;
+}
+.line{
+    margin: 45px 0 30px;
+    text-align: center;
+    color: #9ca3af;
+    position: relative;
+
+}
+.line::before,
+.line::after{
+    content: '';
+    position: absolute;
+    width: 35%;
+    height: 1px;
+    background: #e5e7eb;
+    top: 50%;
+}
+.line::before{
+    left: 0;
+}
+.line::after{
+    right: 0;
+}
+.social-icon{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+
+}
+.social-icon i{
+    width: 45px;
+    height: 45px;
+    background: #f3f4f6;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    color: #1b5e20;
+    transition: 0.3s;
+}
+.social-icon i:hover{
+    background: #1b5e20;
+    color: white;
+}
+
+.login{
+    text-align: center;
+    margin-top: 35px;
+    color: #6b7280;
+
+}
+.login a{
+    color: #1b5e20;
+    text-decoration: none;
+    font-weight: 600;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <h2 class="hospital-name">HealthCare</h2>
+            <div class="welcome">
+                <h1>
+                    Welcome To <br> HealthCare <br> Hospital System
+                </h1>
+
+            </div>
+            <img src="pic/file_000000003490720c8aec86b2adc76365.png" alt="logo" class="logo">
+        </div>
+        <div class="right-side">
+            <h1>Create Account</h1>
+            <form>
+                <div class="input-box">
+                  <input type="text" placeholder="Full Name">
+                </div>
+                <div class="input-box">
+                    <input type="email" placeholder="Email Address">
+                  </div>
+                  <div class="input-box">
+                    <input type="password" placeholder="Password">
+                  </div>
+                  
+                <button type="submit">
+                    Sign Up
+                </button>
+
+                  
+            </form>
+            <div class="line">
+                <span>Or Sign Up With</span>
+            </div>
+            <div class="social-icon">
+                <i class="fab fa-google"></i>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-linkedin-in"></i>
+            </div>
+            <p class="login">Already habe an Account
+                <a href="#">Log In</a>
+            </p>
+
+        </div>
+
+    </div>
+</body>
+</html>
