@@ -26,8 +26,8 @@ body{
 
 }   
 .container{
-  width: 1100px;
-  min-height: 650px;
+  width: 900px;
+  min-height: 600px;
   background: #fff;
   border-radius: 35px;
   overflow: hidden;
@@ -47,8 +47,9 @@ body{
 }
 .hospital-name{
     width: 100%;
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 700;
+    text-align: center;
 
 }
 .welcome{
@@ -56,8 +57,8 @@ body{
     width: 100%;
 }
 .welcome h1{
-    font-size: 50px;
-    line-height: 70px;
+    font-size: 40px;
+    line-height: 60px;
     font-weight: 700;
 }
 .logo{
@@ -66,27 +67,28 @@ body{
 }
 .right-side{
     width: 55%;
-    padding: 70px;
+    padding: 60px;
+    padding-top: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 
 }
 .right-side h1{
-    margin-bottom: 45px;
+    margin-bottom: 30px;
     color: #111827;
     font-size: 42px;
 }
 .input-box{
-    margin-bottom: 28px;
+    margin-bottom: 22px;
 
 }
 .input-box input{
     width: 100%;
     border: none;
     border-bottom: 2px solid #e5e7eb;
-    padding: 14px 0;
-    font-size: 17px;
+    padding: 10px 0;
+    font-size: 15px;
     outline: none;
     transition: 0.3s;
 }
@@ -98,9 +100,10 @@ button{
     border: none;
     background: #1b5e20;
     color: white;
-    padding: 18px;
+    padding: 15px;
     border-radius: 40px;
-    font-size: 18px;
+    font-size: 15px;
+    
     font-weight: 600;
     cursor: pointer;
     transition: 0.3s;
@@ -120,7 +123,7 @@ button:hover{
     accent-color: #1b5e20;
 }
 .line{
-    margin: 45px 0 30px;
+    margin: 20px 0 30px;
     text-align: center;
     color: #9ca3af;
     position: relative;
@@ -167,7 +170,7 @@ button:hover{
 
 .login{
     text-align: center;
-    margin-top: 35px;
+    margin-top: 20px;
     color: #6b7280;
 
 }
@@ -181,7 +184,7 @@ button:hover{
 <body>
     <div class="container">
         <div class="left-side">
-            <h2 class="hospital-name">HealthCare</h2>
+            
             <div class="welcome">
                 <h1>
                     Welcome To <br> HealthCare <br> Hospital System
@@ -189,6 +192,7 @@ button:hover{
 
             </div>
             <img src="pic/converted_image.png" alt="logo" class="logo">
+            <h2 class="hospital-name">HealthCare</h2>
         </div>
         <div class="right-side">
             <h1>Login To Account</h1>
@@ -224,7 +228,7 @@ button:hover{
                 <i class="fab fa-linkedin-in"></i>
             </div>
             <p class="login">Don't have account?
-                <a href="#">Log In</a>
+                <a href="sign.html">Sign In</a>
             </p>
 
         </div>

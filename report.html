@@ -140,11 +140,19 @@ body{
     text-align:center;
     box-shadow:0 3px 12px rgba(0,0,0,.08);
     border-top:5px solid #0d330e;
-    transition:.3s;
+    transition: all 0.3s ease;
 }
-
+.summary-card i{
+    font-size:28px;
+    color:#0d330e;
+    margin-bottom:10px;
+}
 .summary-card:hover{
-    transform:translateY(-3px);
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+}
+.summary-card:hover i{
+    transform: scale(1.08);
 }
 
 .summary-card h3{
@@ -157,161 +165,175 @@ body{
     font-size:14px;
 }
 
-.report-filters{
-    background:#fff;
-    padding:18px;
-    border-radius:15px;
+.filters {
     display:flex;
-    gap:30px;
+    gap:10px;
+    margin-bottom:20px;
     flex-wrap:wrap;
-    margin-bottom:25px;
-    box-shadow:0 3px 12px rgba(0,0,0,.08);
-}
-
-.report-filters input,
-.report-filters select{
-    padding:12px;
-    border:1px solid #ddd;
-    border-radius:10px;
-    outline:none;
-    transition:.3s;
-}
-
-.report-filters input:focus,
-.report-filters select:focus{
-    border-color:#0d330e;
-    box-shadow:0 0 0 3px rgba(13,51,14,0.1);
-}
-
-.generate-btn{
-    background:#0d330e;
-    color:#ffefb3;
-    border:none;
-    padding:12px 18px;
-    border-radius:10px;
-    cursor:pointer;
-    transition:.3s;
-}
-
-.generate-btn:hover{
-    background:#145017;
-}
-
-.mini-chart{
-    display:flex;
-    justify-content:space-around;
-    align-items:flex-end;
-    height:250px;
-    padding:15px 10px;
-}
-
-.bar{
-    display:flex;
-    flex-direction:column;
     align-items:center;
-    justify-content:flex-end;
-    height:100%;
-    gap:8px;
 }
 
-.bar span{
-    width:35px;
-    background:linear-gradient(to top,#0d330e,#2f7d32);
-    border-radius:10px 10px 0 0;
-
-    transform-origin:bottom;
-    animation:growBar 1s ease forwards;
+.filter-btn,
+.date-input {
+    background: white;
+    border: 1px solid #d9e0dc;
+    padding: 12px 18px;
+    border-radius: 10px;
+    min-width:160px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    transition:all 0.3s ease;
+}
+.filter-btn:hover{
+    transform:translateY(-8px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    background: #0d330e;
+    color: white;
+}
+.date-input:hover{
+    transform:translateY(-8px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    background: #0d330e;
+    color: white;
 }
 
-.bar small{
-    color:#0d330e;
-    font-weight:bold;
+.active {
+    background: #0d330e;
+    color: white;
 }
 
-.bar p{
-    color:#666;
-    font-size:13px;
+.finance-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+
+    margin-bottom: 30px;
 }
 
-.bar:nth-child(1) span{animation-delay:.1s;}
-.bar:nth-child(2) span{animation-delay:.2s;}
-.bar:nth-child(3) span{animation-delay:.3s;}
-.bar:nth-child(4) span{animation-delay:.4s;}
-.bar:nth-child(5) span{animation-delay:.5s;}
-.bar:nth-child(6) span{animation-delay:.6s;}
+.finance-card {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    transition:all 0.3s ease;
+}
+.finance-card:hover{
+    transform:translateY(-8px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    
+}
+    
 
-@keyframes growBar{
-    from{
-        transform:scaleY(0);
-        opacity:0;
+.card-title {
+    margin-bottom: 25px;
+}
+
+.card-title h2 {
+    color: #0d330e;
+}
+
+.finance-item {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 18px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.finance-item span {
+    color: #555;
+}
+
+.finance-item strong {
+    color: #0d330e;
+}
+
+.profit-card {
+    background: #0d330e;
+    color: white;
+    padding: 30px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.profit-card p {
+    margin-top: 8px;
+    opacity: .8;
+}
+
+.profit-card h1 {
+    font-size: 42px;
+}
+
+
+.report-section {
+    margin-bottom: 35px;
+}
+
+.section-header {
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    color: #0d3b2e;
+    margin-bottom: 6px;
+}
+
+.section-header p {
+    color: #777;
+}
+
+.table-container {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    overflow-x: auto;
+}
+
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-container th {
+    background: #0d330e;
+    color: white;
+    padding: 16px;
+    text-align: left;
+}
+
+.table-container td {
+    padding: 16px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.table-container tr:hover {
+    background: #f5f8f7;
+}
+
+@media (max-width: 900px) {
+
+    .finance-grid {
+        grid-template-columns: 1fr;
     }
-    to{
-        transform:scaleY(1);
-        opacity:1;
+
+    .profit-card {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
     }
+
+    .report-header {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
 }
 
-.chart-placeholder{
-    height:220px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border:2px dashed #0d330e;
-    border-radius:12px;
-    color:#0d330e;
-    font-weight:600;
-    opacity:0.8;
-}
 
-.department-report{
-    background:#fff;
-    padding:20px;
-    border-radius:15px;
-    margin-bottom:25px;
-    box-shadow:0 3px 12px rgba(0,0,0,.08);
-}
 
-.department-report h3{
-    color:#0d330e;
-    margin-bottom:10px;
-}
-
-.department-item{
-    display:flex;
-    justify-content:space-between;
-    padding:14px 0;
-    border-bottom:1px solid #eee;
-}
-
-.department-item:last-child{
-    border-bottom:none;
-}
-
-.activity-section{
-    background:#fff;
-    padding:20px;
-    border-radius:15px;
-    box-shadow:0 3px 12px rgba(0,0,0,.08);
-}
-
-.activity-section h3{
-    color:#0d330e;
-    margin-bottom:10px;
-}
-
-.activity-item{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    margin-top:14px;
-}
-
-.dot{
-    width:12px;
-    height:12px;
-    background:#0d330e;
-    border-radius:50%;
-}
 
 </style>
 </head>
@@ -394,126 +416,312 @@ body{
             <div class="summary-cards">
         
                 <div class="summary-card">
+                    <i class="fa-solid fa-bed"></i>
                     <h3>1,254</h3>
                     <p>Total Patients</p>
                 </div>
         
                 <div class="summary-card">
+                    <i class="fa-solid fa-user-doctor"></i>
                     <h3>42</h3>
                     <p>Total Doctors</p>
                 </div>
         
                 <div class="summary-card">
+                    <i class="fa-solid fa-calendar-check"></i>
                     <h3>856</h3>
                     <p>Appointments</p>
                 </div>
         
                 <div class="summary-card">
+                    <i class="fa-solid fa-sack-dollar"></i>
                     <h3>$45,200</h3>
                     <p>Total Revenue</p>
                 </div>
         
             </div>
-            <div class="report-filters">
-        
-                <input type="date">
-                <input type="date">
-        
-                <select>
-                    <option>All Departments</option>
-                    <option>Cardiology</option>
-                    <option>Neurology</option>
-                </select>
-        
-                <button class="generate-btn">
-                    Generate Report
-                </button>
-        
-            </div>
-            <div class="chart-card">
-                <h3>Monthly Revenue</h3>
+                
+                <section class="filters">
             
-                <div class="mini-chart">
+                    <button class="filter-btn active">
+                        Today
+                    </button>
             
-                    <div class="bar">
-                        <small>$8k</small>
-                        <span style="height:50%"></span>
-                        <p>Jan</p>
+                    <button class="filter-btn">
+                        This Week
+                    </button>
+            
+                    <button class="filter-btn">
+                        This Month
+                    </button>
+            
+                    <button class="filter-btn">
+                        This Year
+                    </button>
+            
+                    <input
+                        type="date"
+                        class="date-input"
+                    >
+            
+                    <input
+                        type="date"
+                        class="date-input"
+                    >
+            
+                </section>
+            
+                <section class="finance-grid">
+                    <div class="finance-card">
+            
+                        <div class="card-title">
+                            <h2>Revenue Sources</h2>
+                        </div>
+            
+                        <div class="finance-item">
+                            <span>Consultation Fees</span>
+                            <strong>$32,000</strong>
+                        </div>
+            
+                        <div class="finance-item">
+                            <span>Surgery Income</span>
+                            <strong>$48,500</strong>
+                        </div>
+            
+                        <div class="finance-item">
+                            <span>Laboratory Income</span>
+                            <strong>$18,000</strong>
+                        </div>
+            
+                        <div class="finance-item">
+                            <span>Pharmacy Income</span>
+                            <strong>$30,000</strong>
+                        </div>
+            
+                    </div>
+                    <div class="finance-card">
+            
+                        <div class="card-title">
+                            <h2>Expense Breakdown</h2>
+                        </div>
+            
+                        <div class="finance-item">
+                            <span>Staff Salaries</span>
+                            <strong>$25,000</strong>
+                        </div>
+            
+                        <div class="finance-item">
+                            <span>Medical Equipment</span>
+                            <strong>$12,000</strong>
+                        </div>
+            
+                        <div class="finance-item">
+                            <span>Medicines</span>
+                            <strong>$8,000</strong>
+                        </div>
+            
+                        <div class="finance-item">
+                            <span>Utilities</span>
+                            <strong>$5,500</strong>
+                        </div>
+            
+                        <div class="finance-item">
+                            <span>Maintenance</span>
+                            <strong>$1,800</strong>
+                        </div>
+            
                     </div>
             
-                    <div class="bar">
-                        <small>$10k</small>
-                        <span style="height:65%"></span>
-                        <p>Feb</p>
+                </section>
+                <section class="profit-card">
+            
+                    <div>
+                        <h3>Net Profit</h3>
+                        <p>Total Revenue − Total Expenses</p>
                     </div>
             
-                    <div class="bar">
-                        <small>$12k</small>
-                        <span style="height:80%"></span>
-                        <p>Mar</p>
-                    </div>
+                    <h1>$76,200</h1>
             
-                    <div class="bar">
-                        <small>$9k</small>
-                        <span style="height:60%"></span>
-                        <p>Apr</p>
-                    </div>
+                </section>
+                
+
+
+<section class="finance-grid">
+    <div class="finance-card">
+
+        <div class="card-title">
+            <h2>Payient Reports</h2>
+        </div>
+
+        <div class="finance-item">
+            <span>New Patients</span>
+            <strong>120</strong>
+        </div>
+
+        <div class="finance-item">
+            <span>Returning Patients</span>
+            <strong>85</strong>
+        </div>
+
+        <div class="finance-item">
+            <span>Admitted Patients</span>
+            <strong>30</strong>
+        </div>
+
+        <div class="finance-item">
+            <span>Discharged Patients</span>
+            <strong>28</strong>
+        </div>
+
+    </div>
+    <div class="finance-card">
+
+        <div class="card-title">
+            <h2>Appointments Reports</h2>
+        </div>
+
+        <div class="finance-item">
+            <span>Total Appointments</span>
+            <strong>780</strong>
+        </div>
+
+        <div class="finance-item">
+            <span>Completed</span>
+            <strong>222</strong>
+        </div>
+
+        <div class="finance-item">
+            <span>Pending</span>
+            <strong>60</strong>
+        </div>
+
+        <div class="finance-item">
+            <span>Cancelled</span>
+            <strong>40</strong>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="report-section">
+
+    <div class="section-header">
+        <h2>Doctor Performance</h2>
+        <p>Performance and revenue generated by doctors.</p>
+    </div>
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Doctor</th>
+                    <th>Department</th>
+                    <th>Patients</th>
+                    <th>Appointments</th>
+                    <th>Revenue</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>Dr.John Smith</td>
+                    <td>Cardiology</td>
+                    <td>145</td>
+                    <td>180</td>
+                    <td>$25,000</td>
+                </tr>
+
+                <tr>
+                    <td>Dr. Sarah Wilson</td>
+                    <td>Neurology</td>
+                    <td>120</td>
+                    <td>150</td>
+                    <td>$18,500</td>
+                </tr>
+
+                <tr>
+                    <td>Dr. Emily Brown</td>
+                    <td>Pediatrics</td>
+                    <td>170</td>
+                    <td>210</td>
+                    <td>$27,000</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+
+
+<section class="report-section">
+
+    <div class="section-header">
+        <h2>Department Performance</h2>
+        <p>Performance comparison between departments.</p>
+    </div>
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Department</th>
+                    <th>Patients</th>
+                    <th>Revenue</th>
+                    <th>Doctors</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>Cardiology</td>
+                    <td>350</td>
+                    <td>$25,000</td>
+                    <td>18</td>
+                </tr>
+
+                <tr>
+                    <td>Neurology</td>
+                    <td>220</td>
+                    <td>$15,000</td>
+                    <td>12</td>
+                </tr>
+
+                <tr>
+                    <td>Pediatrics</td>
+                    <td>280</td>
+                    <td>$18,000</td>
+                    <td>20</td>
+                </tr>
+
+                <tr>
+                    <td>Orthopedics</td>
+                    <td>170</td>
+                    <td>$12,000</td>
+                    <td>14</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
             
-                    <div class="bar">
-                        <small>$14k</small>
-                        <span style="height:90%"></span>
-                        <p>May</p>
-                    </div>
             
-                    <div class="bar">
-                        <small>$11k</small>
-                        <span style="height:75%"></span>
-                        <p>Jun</p>
-                    </div>
             
-                </div>
-            </div>
-            <div class="department-report">
-        
-                <h3>Top Departments</h3>
-        
-                <div class="department-item">
-                    <span>Cardiology</span>
-                    <strong>356 Patients</strong>
-                </div>
-        
-                <div class="department-item">
-                    <span>Neurology</span>
-                    <strong>274 Patients</strong>
-                </div>
-        
-                <div class="department-item">
-                    <span>Orthopedics</span>
-                    <strong>198 Patients</strong>
-                </div>
-        
-            </div>
-            <div class="activity-section">
-        
-                <h3>Recent Activities</h3>
-        
-                <div class="activity-item">
-                    <div class="dot"></div>
-                    <p>New patient registered</p>
-                </div>
-        
-                <div class="activity-item">
-                    <div class="dot"></div>
-                    <p>Payment completed - $450</p>
-                </div>
-        
-                <div class="activity-item">
-                    <div class="dot"></div>
-                    <p>Appointment scheduled</p>
-                </div>
-        
-            </div>
-        
         </main>
 </body>
 </html>
