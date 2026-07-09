@@ -140,6 +140,10 @@ body{
 .search input:focus{
     border-color: #0d330e;
 }
+.admin-dropdown{
+    position: relative;
+    display: inline-block;
+}
 .admin-box{
     display:flex;
     align-items:center;
@@ -148,6 +152,7 @@ body{
     padding:10px 15px;
     border-radius:15px;
     box-shadow:0 3px 10px rgba(0,0,0,.08);
+    cursor: pointer;
 }
 
 .admin-box img{
@@ -168,6 +173,44 @@ body{
 
 .admin-box i{
     color:#0d330e;
+}
+.dropdown-menu{
+    position: absolute;
+    top: 110%;
+    right: 0;
+    width: 220px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.12);
+    overflow-y: hidden;
+    display: none;
+    z-index: 1000;
+}
+.dropdown-menu a{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #333;
+    transition: .3s;
+}
+.dropdown-menu a:hover{
+    background: #f3f7f3;
+    color: #0d330e;
+}
+.dropdown-menu a i{
+    width: 20px;
+    color: #0d330e;
+}
+.logout {
+    color: #d62828 !important;
+}
+.logout i{
+    color: #d62828 !important
+}
+.admin-dropdown:hover .dropdown-menu{
+    display: block;
 }
 .cards{
     display:flex;
@@ -325,6 +368,7 @@ body{
     width:45px;
     height:45px;
     border-radius: 10px;
+    object-fit: cover;
     
 }
 .doctor:hover{
