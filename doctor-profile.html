@@ -104,7 +104,7 @@ body{
 
 .doctor-profile-card{
     display: flex;
-    
+    position: relative;
     background:#fff;
     border-radius:20px;
     padding:25px;
@@ -123,6 +123,23 @@ body{
 
 .doctor-details{
     flex:1;
+}
+.edit-btn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: white;
+    color: #0d330e;
+    border: 2px solid #0d330e;
+    padding: 8px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+}
+.edit-btn:hover{
+    background: #0d330e;
+    color: white;
+    border: 2px solid #e8f6e9;
 }
 
 
@@ -301,10 +318,10 @@ td{
                 <div class="doctor-profile-card">
                     
             
-                    <img src="pic/happy-doctor-with-stethoscope-doctor-isolated-white-medical-doctor-man-with-thumb-up_474717-99682.jpg" alt="Doctor">
+                    <img src="pic/portrait-positive-black-doctor-holding-medical-chart-male-over-white-background-178499631.jpg" alt="Doctor">
                     
                     <div class="doctor-details">
-                        <button>Edite</button>
+                        <button class="edit-btn">Edit</button>
                         <h2>Dr. John Smith</h2>
                         
                         <span class="speciality">Cardiologist</span>

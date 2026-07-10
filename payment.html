@@ -263,6 +263,7 @@ body{
     border: none;
     
 }
+
 .invoice-section .table1 td a{
     text-decoration: none;
     color: #0d330e;
@@ -277,6 +278,21 @@ body{
     transform:translateY(-8px) scale(1.03);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     
+}
+.badge{
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+.badge-success{
+    background: #d4edda;
+    color: #0d330e;
+}
+.badge-unsuccess{
+    background:#fef3c7;
+    color:#92400e;
+
 }
 .payment-section .table2 {
     width: 100%;
@@ -295,6 +311,10 @@ body{
     padding: 18px;
 
     
+}
+.payment-section .table2 td a{
+    text-decoration: none;
+    color: #0d330e;
 }
 .payment-section .table2 tbody tr{
     transition:all 0.3s ease;
@@ -455,7 +475,7 @@ body{
                 </div>
         
                 <button class="add-payment-btn">
-                    <i class="fa-solid fa-house"></i>
+                    <a href="add-payment.html"><i class="fa-solid fa-plus"></i></a>
                     Add Payment
                 </button>
         
@@ -537,7 +557,7 @@ body{
                     <td>7 Aug 2026</td>
                     <td>$100</td>
                     <td>
-                        <span class="budage by-success">Paid</span>
+                        <span class="badge badge-success">Paid</span>
                     </td>
                 </tr>
                 <tr>
@@ -548,7 +568,7 @@ body{
                     <td>7 Aug 2026</td>
                     <td>$100</td>
                     <td>
-                        <span class="budage by-success">Paid</span>
+                        <span class="badge badge-unsuccess">Pending</span>
                     </td>
                 </tr>
                 <tr>
@@ -559,7 +579,7 @@ body{
                     <td>7 Aug 2026</td>
                     <td>$100</td>
                     <td>
-                        <span class="budage by-success">Paid</span>
+                        <span class="badge badge-success">Paid</span>
                     </td>
                 </tr>
                 <tr>
@@ -570,7 +590,7 @@ body{
                     <td>7 Aug 2026</td>
                     <td>$100</td>
                     <td>
-                        <span class="budage by-success">Paid</span>
+                        <span class="badge badge-unsuccess">Pending</span>
                     </td>
                 </tr>
                 <tr>
@@ -581,7 +601,7 @@ body{
                     <td>7 Aug 2026</td>
                     <td>$100</td>
                     <td>
-                        <span class="budage budage-success">Paid</span>
+                        <span class="badge badge-success">Paid</span>
                     </td>
                 </tr>
               </tbody>
@@ -601,37 +621,37 @@ body{
                 </thead>
                 <tbody>
                   <tr>
-                      <td>#INV-0001</td>
+                      <td><a href="invoice.html">#INV-0001</a></td>
                       <td>Ahmad Khan</td>
-                      <td>PayPal</td>
+                      <td>Card</td>
                       <td>7 Aug 2026</td>
                       <td>$500</td>
                   </tr>
                   <tr>
-                    <td>#INV-0001</td>
+                    <td><a href="invoice.html">#INV-0001</a></td>
                     <td>Ahmad Khan</td>
                     <td>PayPal</td>
                     <td>7 Aug 2026</td>
                     <td>$500</td>
                   </tr>
                   <tr>
-                    <td>#INV-0001</td>
+                    <td><a href="invoice.html">#INV-0001</a></td>
                     <td>Ahmad Khan</td>
                     <td>PayPal</td>
                     <td>7 Aug 2026</td>
                     <td>$500</td>
                   </tr>
                   <tr>
-                    <td>#INV-0001</td>
+                    <td><a href="invoice.html">#INV-0001</a></td>
                     <td>Ahmad Khan</td>
                     <td>PayPal</td>
                     <td>7 Aug 2026</td>
                     <td>$500</td>
                   </tr>
                   <tr>
-                    <td>#INV-0001</td>
+                    <td><a href="invoice.html">#INV-0001</a></td>
                     <td>Ahmad Khan</td>
-                    <td>PayPal</td>
+                    <td>Cash</td>
                     <td>7 Aug 2026</td>
                     <td>$500</td>
                   </tr>

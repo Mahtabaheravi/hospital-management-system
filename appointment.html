@@ -571,8 +571,8 @@ tbody tr:hover{
             
                             <td class="actions">
                                 <a href="appointment-info.html"><i class="fa-solid fa-eye"></i></a>
-                                <i class="fa-solid fa-pen"></i>
-                                <i class="fa-solid fa-trash"></i>
+                                <a href="edit-appointment.html"><i class="fa-solid fa-pen"></i></a>
+                                <a href="#" onclick="confirmDelete()"><i class="fa-solid fa-trash"></i></a>
                             </td>
             
                         </tr>
@@ -665,5 +665,15 @@ tbody tr:hover{
         </section>
         
         </main>
+        <script>
+            function confirmDelete(){
+            let result = confirm("Are you sure you want to delete this item?");
+            if(result){
+                alert("Deleted successfully");
+                 return true;
+            }
+            return false;
+        }
+        </script>
 </body>
 </html>

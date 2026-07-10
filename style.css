@@ -152,6 +152,7 @@ body{
     padding:10px 15px;
     border-radius:15px;
     box-shadow:0 3px 10px rgba(0,0,0,.08);
+    transition:all 0.3s ease;
     cursor: pointer;
 }
 
@@ -178,7 +179,7 @@ body{
     position: absolute;
     top: 110%;
     right: 0;
-    width: 220px;
+    width: 180px;
     background: white;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,.12);
@@ -211,6 +212,10 @@ body{
 }
 .admin-dropdown:hover .dropdown-menu{
     display: block;
+}
+.admin-box:hover{
+    transform:translateY(-8px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 .cards{
     display:flex;
@@ -286,6 +291,13 @@ body{
     padding:8px 14px;
     border-radius:4px;
     cursor:pointer;
+    transition:all 0.3s ease;
+
+    
+}
+.card-header button:hover{
+    transform:translateY(-8px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 .appointment{
@@ -363,13 +375,36 @@ body{
     font-weight: 700;
 }
 
-
-.doctor img{
+.doctor-img{
+    position: relative;
+    width: 45px;
+    width: 45px;
+}
+.doctor-img img{
     width:45px;
     height:45px;
     border-radius: 10px;
     object-fit: cover;
     
+}
+.doctor a{
+    text-decoration: none;
+    color: #0d330e;
+}
+.status-dot{
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    right: -3px;
+    left: -3px;
+    border: 2px solid white;
+}
+.available{
+    background: #2196f3;
+}
+.unavailable{
+    background: #e539e5;
 }
 .doctor:hover{
     background: #eeeeee;
