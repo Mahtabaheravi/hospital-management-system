@@ -226,20 +226,16 @@ body{
     cursor:pointer;
 }
 
-.invoice-section h3 ,
-.payment-section h3 ,
-.tax-section h3{
+.invoice-section h3{
     color: #0d330e;
     font-size: 22px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     margin-top: 50px;
     padding-bottom: 12px;
     border-bottom: 2px solid #e8f6e9;
     text-align: left;
 }
-.invoice-section i ,
-.payment-section i ,
-.tax-section i{
+.invoice-section i{
     margin-right: 15px;
     color: #0d330e;
 }
@@ -249,6 +245,9 @@ body{
     border-collapse: separate;
     border-spacing: 0 7px;
     border-radius: 20px;
+    background:#fff;
+    padding:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
 .invoice-section .table1 th{
     padding: 15px;
@@ -294,78 +293,6 @@ body{
     color:#92400e;
 
 }
-.payment-section .table2 {
-    width: 100%;
-    border-collapse: collapse;
-    overflow: hidden;
-    border-radius: 18px;
-}
-.payment-section .table2 th{
-    background: #0d330e;
-    color: #ffefb3;
-    padding: 18px;
-    text-align: left;
-    
-}
-.payment-section .table2 td{
-    padding: 18px;
-
-    
-}
-.payment-section .table2 td a{
-    text-decoration: none;
-    color: #0d330e;
-}
-.payment-section .table2 tbody tr{
-    transition:all 0.3s ease;
-   
-}
-.payment-section .table2 tbody tr:nth-child(even){
-    background: #f8fbf8;
-}
-.payment-section .table2 tbody tr:hover{
-    transform:translateY(-8px) scale(1.03);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
-.tax-section .table3{
-    width: 100%;
-    border-collapse: collapse;
-    background: #ffffff;
-    border: 1px solid #e5e7eb;
-    text-align: center;
-}
-
-.tax-section .table3 thead th{
-    background: #0d330e; 
-    color: #ffffff;
-    padding: 15px 16px;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 0.6px;
-    border-right: 1px solid #1f2937;
-}
-
-.tax-section .table3 tbody td{
-    padding: 14px 16px;
-    font-size: 14px;
-    color: #0d330e;
-    border-bottom: 1px solid #0d330e;
-    border-right: 1px solid #0d330e;
-}
-
-.tax-section .table3 tbody tr:hover{
-    background: transparent;
-}
-
-.tax-section .table3 th:last-child,
-.tax-section .table3 td:last-child{
-    border-right: none;
-}
-
-.tax-section .table3 tbody td{
-    vertical-align: middle;
-}
-
 
 
 
@@ -544,6 +471,7 @@ body{
                     <th>Patient</th>
                     <th>Created Date</th>
                     <th>Due Date</th>
+                    <th>Paymet Method</th>
                     <th>Amount</th>
                     <th>Status</th>
                 </tr>
@@ -555,6 +483,7 @@ body{
                     <td>Ahmad Khan</td>
                     <td>1 Aug 2026</td>
                     <td>7 Aug 2026</td>
+                    <td>Cash</td>
                     <td>$100</td>
                     <td>
                         <span class="badge badge-success">Paid</span>
@@ -566,6 +495,7 @@ body{
                     <td>Fatima Noor</td>
                     <td>3 Aug 2026</td>
                     <td>7 Jul 2026</td>
+                    <td>Card</td>
                     <td>$180</td>
                     <td>
                         <span class="badge badge-unsuccess">Pending</span>
@@ -577,6 +507,7 @@ body{
                     <td>Ali Hassan</td>
                     <td>8 Aug 2026</td>
                     <td>20 Sep 2026</td>
+                    <td>Bank Transfer</td>
                     <td>$100</td>
                     <td>
                         <span class="badge badge-success">Paid</span>
@@ -588,6 +519,7 @@ body{
                     <td>Zahra Ali</td>
                     <td>8 Aug 2026</td>
                     <td>22 Aug 2026</td>
+                    <td>Cash</td>
                     <td>$150</td>
                     <td>
                         <span class="badge badge-unsuccess">Pending</span>
@@ -600,6 +532,7 @@ body{
                         Ekram Jalali</td>
                     <td>20 Jun 2026</td>
                     <td>8 Aug 2026</td>
+                    <td>Cash</td>
                     <td>$900</td>
                     <td>
                         <span class="badge badge-success">Paid</span>
