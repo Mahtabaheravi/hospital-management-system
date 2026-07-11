@@ -259,22 +259,87 @@ body{
     cursor:pointer;
 }
 
-@media(max-width:900px){
+@media (max-width:1024px){
 
-    .settings-grid{
-        grid-template-columns:1fr;
-    }
-
-    .preferences{
-        grid-template-columns:1fr;
-    }
-
-    .full-width{
-        grid-column:auto;
-    }
-
+    .sidebar{
+    width:200px;
+    padding:20px 10px;
 }
 
+.logo{
+    gap:8px;
+    margin-bottom:35px;
+}
+
+.logo img{
+    width:45px;
+    height:45px;
+}
+
+.logo span{
+    font-size:20px;
+}
+
+.menu li a{
+    font-size:14px;
+    padding:10px;
+    gap:8px;
+}
+
+.main-content{
+    margin-left:220px;
+    width:calc(100% - 220px);
+    padding:20px;
+}
+
+.report-cards,
+.payment-cards,
+.appointment-cards,
+.summary-cards{
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.settings-grid{
+    grid-template-columns:1fr;
+}
+
+.preferences{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.finance-grid{
+    grid-template-columns:1fr;
+}
+
+.table-toolbar,
+.appointment-toolbar,
+.payment-toolbar{
+    flex-wrap:wrap;
+}
+
+.search-box{
+    width:100%;
+    min-width:100%;
+}
+
+table{
+    min-width:800px;
+}
+
+.table-container{
+    overflow-x:auto;
+}
+
+.patients-header,
+.appointment-header,
+.payment-header,
+.report-header,
+.settings-header{
+    flex-wrap:wrap;
+    gap:15px;
+}
+}
 </style>
 </head>
 <body>

@@ -311,27 +311,73 @@ body{
 .table-container tr:hover {
     background: #f5f8f7;
 }
+@media (max-width:1024px) and (min-width:768px){
 
-@media (max-width: 900px) {
-
-    .finance-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .profit-card {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
-
-    .report-header {
-        flex-direction: column;
-        gap: 20px;
-        align-items: flex-start;
-    }
-
+    .sidebar{
+    width:200px;
+    padding:20px 10px;
 }
 
+.logo{
+    gap:8px;
+    margin-bottom:35px;
+}
+
+.logo img{
+    width:45px;
+    height:45px;
+}
+
+.logo span{
+    font-size:20px;
+}
+
+.menu li a{
+    font-size:14px;
+    padding:10px;
+    gap:8px;
+}
+
+.main-content{
+    margin-left:220px;
+    width:calc(100% - 220px);
+    padding:20px;
+}
+
+.report-header{
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.summary-cards{
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.filters{
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.finance-grid{
+    grid-template-columns:1fr;
+}
+
+.profit-card{
+    flex-wrap:wrap;
+    gap:20px;
+    text-align:center;
+}
+
+.table-container{
+    overflow-x:auto;
+}
+
+.table-container table{
+    min-width:700px;
+}
+
+}
 
 
 

@@ -304,6 +304,85 @@ body{
     transform:translateY(-8px) scale(1.03);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
+.pagination{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:20px;
+}
+
+.page-buttons button{
+    border:none;
+    background:#fff;
+    padding:10px 15px;
+    border-radius:8px;
+    margin-left:5px;
+    cursor:pointer;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+.active-page{
+    background:#0d330e !important;
+    color:#ffefb3;
+}
+@media (max-width:1024px) and (min-width:768px){
+
+    .sidebar{
+    width:200px;
+    padding:20px 10px;
+}
+
+.logo{
+    gap:8px;
+    margin-bottom:35px;
+}
+
+.logo img{
+    width:45px;
+    height:45px;
+}
+
+.logo span{
+    font-size:20px;
+}
+
+.menu li a{
+    font-size:14px;
+    padding:10px;
+    gap:8px;
+}
+
+.main-content{
+    margin-left:220px;
+    width:calc(100% - 220px);
+    padding:20px;
+}
+
+.doctor-page-header{
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.doctor-report-cards{
+    grid-template-columns:repeat(2,1fr);
+}
+.doctor-toolbar{
+    flex-wrap:wrap;
+}
+
+.search-box{
+    width:100%;
+}
+
+.doctor-cards{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.doctor-card img{
+    width:100%;
+    height:170px;
+}
+}
 </style>
 </head>
 <body>
@@ -378,7 +457,7 @@ body{
             
                 <div class="doctor-report-card">
                     <i class="fa-solid fa-user-doctor"></i>
-                    <h3>24</h3>
+                    <h3>48</h3>
                     <p>Total Doctors</p>
                 </div>
             
@@ -507,6 +586,20 @@ body{
                         </div>
                         <a href="doctor-profile.html"><button class="view-btn">View Profile</button></a>
                     </div>
+                </div>
+
+                <div class="pagination">
+            
+                    <span>Showing 1-10 of 48 Doctors</span>
+                
+                    <div class="page-buttons">
+                        <button>Previous</button>
+                        <button class="active-page">1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button>Next</button>
+                    </div>
+                
                 </div>
 
             </section>

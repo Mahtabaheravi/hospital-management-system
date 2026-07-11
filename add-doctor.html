@@ -177,6 +177,64 @@ body{
 .save-btn:hover{
     background: #145017;
 }
+
+@media (min-width:769px) and (max-width:1024px){
+
+    .sidebar{
+    width:200px;
+    padding:20px 10px;
+}
+
+.logo{
+    gap:8px;
+    margin-bottom:35px;
+}
+
+.logo img{
+    width:45px;
+    height:45px;
+}
+
+.logo span{
+    font-size:20px;
+}
+
+.menu li a{
+    font-size:14px;
+    padding:10px;
+    gap:8px;
+}
+
+.main-content{
+    margin-left:220px;
+    width:calc(100% - 220px);
+    padding:20px;
+}
+
+.doctor-form{
+    grid-template-columns:1fr;
+    gap:18px;
+}
+
+.full-width{
+    grid-column:1;
+}
+
+.form-button{
+    grid-column:1;
+    justify-content:stretch;
+    flex-direction:column;
+}
+
+.cancel-btn,
+.save-btn{
+    width:100%;
+}
+
+.form{
+    padding:20px;
+}
+}
 </style>
 <body>
     <div class="dashboard">
@@ -211,7 +269,7 @@ body{
                     </a>
                 </li>
                 <li>
-                    <a href="patients.html">
+                    <a href="payment.html">
                         <i class="fa-solid fa-credit-card"></i>
                         Payments
                     </a>

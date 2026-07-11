@@ -282,28 +282,64 @@ form{
     box-shadow:  0 14px 30px rgba(0,0,0,0.18);
 }
 
-@media(max-width:1000px){
 
-    .profile-grid{
+@media(max-width:1024px){
 
-        grid-template-columns:1fr;
+    .sidebar{
+    width:200px;
+    padding:20px 10px;
+}
 
-    }
+.logo{
+    gap:8px;
+    margin-bottom:35px;
+}
+
+.logo img{
+    width:45px;
+    height:45px;
+}
+
+.logo span{
+    font-size:20px;
+}
+
+.menu li a{
+    font-size:14px;
+    padding:10px;
+    gap:8px;
+}
 
 
-    .form-grid{
+.main-content{
+    margin-left:220px;
+    width:calc(100% - 220px);
+    padding:20px;
+}
 
-        grid-template-columns:1fr;
 
-    }
+.profile-grid{
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
 
 
-    .profile-card:nth-child(3),
-    .profile-card:nth-child(4){
+.form-grid{
+    grid-template-columns:1fr;
+    gap:15px;
+}
 
-        grid-column:span 1;
 
-    }
+.profile-card:nth-child(3),
+.profile-card:nth-child(4){
+    grid-column:span 2;
+}
+
+
+.save-btn,
+.cancel-btn{
+    padding:10px 20px;
+}
 
 }
     </style>

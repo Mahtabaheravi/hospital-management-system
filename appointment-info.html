@@ -180,7 +180,7 @@ body{
     background:#fff;
     border-radius:18px;
     padding:25px;
-    box-shadow:0 3px 12px rgba(29, 75, 29, 0.8);
+    box-shadow:0 3px 12px rgba(191, 250, 191, 0.8);
     color: #0d330e;
     transition: all 0.3s ease;
 }
@@ -228,6 +228,70 @@ body{
 .notes-card:hover{
     transform: translateY(-6px);
     box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+}
+@media(max-width:1024px){
+
+    .sidebar{
+    width:200px;
+    padding:20px 10px;
+}
+
+.logo{
+    gap:8px;
+    margin-bottom:35px;
+}
+
+.logo img{
+    width:45px;
+    height:45px;
+}
+
+.logo span{
+    font-size:20px;
+}
+
+.menu li a{
+    font-size:14px;
+    padding:10px;
+    gap:8px;
+}
+
+
+.main-content{
+    margin-left:220px;
+    width:calc(100% - 220px);
+    padding:20px;
+}
+
+
+.appointment-overview{
+    padding:20px;
+}
+
+
+.avatar{
+    width:75px;
+    height:75px;
+    font-size:25px;
+}
+
+
+.details-grid{
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+
+.detail-card,
+.notes-card{
+    padding:20px;
+}
+
+
+.info-row{
+    font-size:14px;
+}
+
 }
 </style>
 </head>
