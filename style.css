@@ -227,6 +227,7 @@ body{
     flex:1;
     background:white;
     padding:20px;
+
     border-radius:15px;
     position:relative;
     box-shadow:0 3px 12px rgba(0,0,0,.08);
@@ -498,32 +499,59 @@ tr:hover{
     align-items:center;
     justify-content:flex-end;
 }
-
-
-
-@media(max-width:900px){
-
-    .dashboard-container{
-        grid-template-columns:1fr;
+@media(max-width:1200px) {
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 
 }
-@media (max-width:1024px){
+@media (max-width:1024px) and (min-width:768px){
 
-    .cards{
-        flex-wrap:wrap;
+    .sidebar{
+        width:200px;
     }
 
-    .card{
-        min-width:45%;
+    .main-content{
+        margin-left:220px;
+        width:calc(100% - 220px);
+        padding:20px;
+    }
+    .top-bar{
+        flex-wrap:wrap;
+        gap:20px;
+    }
+    .top-right{
+        flex-wrap: wrap;
     }
 
     .search input{
         width:220px;
     }
-
-    .top-bar{
-        flex-wrap:wrap;
+    .cards{
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
         gap:20px;
+        
     }
+    
+    
+    .card-icon{
+        width: 45px;
+        height: 45px;
+        top: 15px;
+        right: 15px;
+    }
+    .dashboard-container{
+        grid-template-columns:1fr;
+    }
+    .bottom-section{
+        grid-template-columns:1fr;
+    }
+    
+    .doctor-list{
+        max-height:none;
+    }
+
 }

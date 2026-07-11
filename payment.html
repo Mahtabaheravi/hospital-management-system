@@ -293,7 +293,27 @@ body{
     color:#92400e;
 
 }
+.pagination{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:20px;
+}
 
+.page-buttons button{
+    border:none;
+    background:#fff;
+    padding:10px 15px;
+    border-radius:8px;
+    margin-left:5px;
+    cursor:pointer;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+.active-page{
+    background:#0d330e !important;
+    color:#ffefb3;
+}
 
 
 
@@ -540,7 +560,19 @@ body{
                 </tr>
               </tbody>
             </table>
-            </section>
+            <div class="pagination">
+            
+                <span>Showing 1-10 of 320 appointments</span>
+            
+                <div class="page-buttons">
+                    <button>Previous</button>
+                    <button class="active-page">1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>Next</button>
+                </div>
+            
+            </div>
             
         
         </section>
