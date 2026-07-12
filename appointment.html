@@ -176,13 +176,19 @@ body{
 }
 
 .search-box{
-    flex:1;
-    min-width:250px;
     background:#fff;
-    padding:12px;
-    border-radius:10px;
     display:flex;
     align-items:center;
+    padding:12px 15px;
+    border-radius:10px;
+    flex:1;
+    min-width:250px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    border: 1px solid transparent;
+    transition: .3s;
+}
+.search-box i{
+    color: #666;
 }
 
 .search-box input{
@@ -190,6 +196,9 @@ body{
     outline:none;
     width:100%;
     margin-left:10px;
+}
+.search-box:focus-within{
+    border-color: #0d330e;
 }
 
 .appointment-toolbar select{
@@ -385,6 +394,52 @@ tbody tr:hover{
 .active-page{
     background:#0d330e !important;
     color:#ffefb3;
+}
+.modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.5);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.modal-box{
+    background:#fff;
+    width:350px;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.modal-box h2{
+    color:#0d330e;
+    margin-bottom:15px;
+}
+
+.modal-box p{
+    margin-bottom:20px;
+}
+
+.modal-box button{
+    padding:10px 18px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    margin:0 5px;
+}
+
+.modal-box button:first-of-type{
+    background:#ccc;
+}
+
+.modal-box button:last-of-type{
+    background:#c40000;
+    color:white;
 }
 @media (max-width:1024px) and (min-width:768px){
 
@@ -638,7 +693,7 @@ table{
                             <td class="actions">
                                 <a href="appointment-info.html"><i class="fa-solid fa-eye"></i></a>
                                 <a href="edit-appointment.html"><i class="fa-solid fa-pen"></i></a>
-                                <a href="#" onclick="confirmDelete()"><i class="fa-solid fa-trash"></i></a>
+                                <a href="#" onclick="return confirmDelete()"><i class="fa-solid fa-trash"></i></a>
                             </td>
             
                         </tr>
@@ -731,15 +786,29 @@ table{
         </section>
         
         </main>
+        <div id="deleteModal" class="modal">
+            <div class="modal-box">
+                <h2>Delete Appointment</h2>
+                <p>Are you sure you want to delete this appointment?</p>
+                <button onclick="closeModal()">Cancel</button>
+                <button onclick="deletePatient()">Delete</button>
+            </div>
+
+        </div>
         <script>
-            function confirmDelete(){
-            let result = confirm("Are you sure you want to delete this item?");
-            if(result){
-                alert("Deleted successfully");
-                 return true;
+             function confirmDelete() {
+                document.getElementById("deleteModal").style.display = "flex";
+                return false;
             }
-            return false;
-        }
+
+            function closeModal() {
+            document.getElementById("deleteModal").style.display = "none";
+            }
+
+             function deletePatient() {
+             alert("Appointment deleted successfully.");
+             closeModal();
+            }
         </script>
 </body>
 </html>
